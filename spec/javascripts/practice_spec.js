@@ -30,3 +30,12 @@ describe('findLongestWord', function() {
 		expect(findLongestWord('What if we try a super-long word such as otorhinolaryngology')).toEqual(19);
 	});
 });
+
+describe('titleCase', function() {
+	it('returns given string with all words the first letter capitalized', function() {
+		expect(titleCase('sHoRt AnD sToUt')).toEqual('Short And Stout');
+	});
+	it('returns given string with all words the first letter capitalized', function() {
+		expect(titleCase("I'm a little tea pot")).toEqual("I'm A Little Tea Pot");
+	});
+});
