@@ -78,3 +78,15 @@ describe('confirmEnding', function() {
 		expect(confirmEnding('Open sesame', 'same')).toEqual(true);
 	});
 });
+
+describe('repeatStringNumTimes', function() {
+	it('returns a string n times', function() {
+		expect(repeatStringNumTimes('*', 3)).toEqual('***');
+	});
+	it('returns a string n times', function() {
+		expect(repeatStringNumTimes('abc', 2)).toEqual('abcabc');
+	});
+	it('returns a empty string if given number is negative', function() {
+		expect(repeatStringNumTimes('*', -3)).toEqual('');
+	});
+});

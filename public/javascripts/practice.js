@@ -72,3 +72,15 @@ function confirmEnding(string, end) {
 		}
 	}
 }
+
+function repeatStringNumTimes(string, num) {
+	if (num < 0) {
+		return '';
+	} else {
+		var stringArray = [];
+		for (var i = 0; i < num; i++) {
+			stringArray.push(string);
+		}
+		return stringArray.join('');
+	}
+}
