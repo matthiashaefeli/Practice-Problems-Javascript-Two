@@ -29,3 +29,16 @@ function findLongestWord(string) {
 	}
 	return lengthArray.sort(sortNumber).reverse()[0];
 }
+
+function capitalizeFirstLetter(string) {
+	return string[0].toUpperCase() + string.slice(1);
+}
+
+function titleCase(string) {
+	var wordArray = string.toLowerCase().split(' ');
+	var resultArray = [];
+	for (var i = 0; i < wordArray.length; i++) {
+		resultArray.push(capitalizeFirstLetter(wordArray[i]));
+	}
+	return resultArray.join(' ');
+}
