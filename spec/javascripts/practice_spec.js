@@ -39,3 +39,22 @@ describe('titleCase', function() {
 		expect(titleCase("I'm a little tea pot")).toEqual("I'm A Little Tea Pot");
 	});
 });
+
+describe('largestOfFour', function() {
+	it('returns an array with the biggest number of each given array', function() {
+		expect(largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]])).toEqual([
+			27,
+			5,
+			39,
+			1001
+		]);
+	});
+	it('returns an array with the biggest number of each given array', function() {
+		expect(largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]])).toEqual([
+			9,
+			35,
+			97,
+			1000000
+		]);
+	});
+});

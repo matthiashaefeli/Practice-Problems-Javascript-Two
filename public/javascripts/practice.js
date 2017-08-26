@@ -42,3 +42,11 @@ function titleCase(string) {
 	}
 	return resultArray.join(' ');
 }
+
+function largestOfFour(numberArray) {
+	var resultArray = [];
+	for (var i = 0; i < numberArray.length; i++) {
+		resultArray.push(numberArray[i].sort(sortNumber).reverse()[0]);
+	}
+	return resultArray;
+}
