@@ -8,10 +8,16 @@ describe('palindrome', function() {
 	it('return false if the word is a palindrome.', function() {
 		expect(palindrome('hello')).toEqual(false);
 	});
-	it('return true if the given word is a palindrome.', function() {
-		expect(palindrome('eye')).toEqual(true);
+	it('return true if the given word is a palindrome(delete underscore).', function() {
+		expect(palindrome('_eye')).toEqual(true);
 	});
-	it('return true if the given word is a palindrom(delete all numbers and signs)', function() {
-		expect(palindrome('&**(+_ 87y8ojo((')).toEqual(true);
+	it('return true if the given word is a palindrom(delete all signs)', function() {
+		expect(palindrome('****ojo)&$')).toEqual(true);
+	});
+	it('return true if the given word is a palindrom', function() {
+		expect(palindrome('A man, a plan, a canal. Panama')).toEqual(true);
+	});
+	it('return true if the given word is a palindrom', function() {
+		expect(palindrome('1 eye for of 1 eye.')).toEqual(false);
 	});
 });
