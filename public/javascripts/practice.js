@@ -50,3 +50,25 @@ function largestOfFour(numberArray) {
 	}
 	return resultArray;
 }
+
+function confirmEnding(string, end) {
+	var stringArray = string.split(' ');
+	var lastWord = stringArray[stringArray.length - 1];
+	if (end.length == 1) {
+		if (lastWord[lastWord.length - 1] == end) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		var stringEnd = [];
+		for (i = lastWord.length - 1, itwo = 0; itwo < end.length; i--, itwo++) {
+			stringEnd.unshift(lastWord[i]);
+		}
+		if (stringEnd.join('') == end) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}

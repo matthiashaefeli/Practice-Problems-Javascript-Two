@@ -58,3 +58,23 @@ describe('largestOfFour', function() {
 		]);
 	});
 });
+
+describe('confirmEnding', function() {
+	it('returns true if a given string (first argument) ends with the letter of the second argument', function() {
+		expect(confirmEnding('Bastian', 'n')).toEqual(true);
+	});
+	it('returns true if a given string (first argument) ends with the letter of the second argument', function() {
+		expect(confirmEnding('He has to give me a new name', 'name')).toEqual(true);
+	});
+	it('returns false if a given string (first argument) not ends with the letter of the second argument', function() {
+		expect(
+			confirmEnding(
+				'Walking on water and developing software from a specification are easy if both are frozen',
+				'specification'
+			)
+		).toEqual(false);
+	});
+	it('returns false if a given string (first argument) not ends with the letter of the second argument', function() {
+		expect(confirmEnding('Open sesame', 'same')).toEqual(true);
+	});
+});
