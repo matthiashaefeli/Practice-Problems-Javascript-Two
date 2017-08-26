@@ -6,3 +6,13 @@ function factorial(num) {
 
 	return result;
 }
+
+function palindrome(str) {
+	var myRe = /(?!_)\w/g;
+	var newStr = str.toLowerCase().match(myRe);
+	if (newStr.join('') == newStr.reverse().join('')) {
+		return true;
+	} else {
+		return false;
+	}
+}
