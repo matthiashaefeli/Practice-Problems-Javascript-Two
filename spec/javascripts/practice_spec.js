@@ -27,6 +27,6 @@ describe('findLongestWord', function() {
 		expect(findLongestWord('The quick brown fox jumped over the lazy dog')).toEqual(6);
 	});
 	it('returns the length of the longest word in a given string', function() {
-		expect(findLongestWord('TWhat if we try a super-long word such as otorhinolaryngology')).toEqual(19);
+		expect(findLongestWord('What if we try a super-long word such as otorhinolaryngology')).toEqual(19);
 	});
 });

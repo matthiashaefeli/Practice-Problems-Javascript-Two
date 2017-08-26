@@ -16,3 +16,16 @@ function palindrome(str) {
 		return false;
 	}
 }
+
+function sortNumber(a, b) {
+	return a - b;
+}
+
+function findLongestWord(string) {
+	var wordArray = string.split(' ');
+	var lengthArray = [];
+	for (var i = 0; i < wordArray.length; i++) {
+		lengthArray.push(wordArray[i].length);
+	}
+	return lengthArray.sort(sortNumber).reverse()[0];
+}
