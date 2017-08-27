@@ -110,3 +110,15 @@ describe('truncateString', function() {
 		expect(truncateString('Absolutely Longer', 2)).toEqual('Ab...');
 	});
 });
+
+describe('chunkArrayInGroups', function() {
+	it('splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array', function() {
+		expect(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2)).toEqual([['a', 'b'], ['c', 'd']]);
+	});
+	it('splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array', function() {
+		expect(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)).toEqual([[0, 1, 2], [3, 4, 5]]);
+	});
+	it('splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array', function() {
+		expect(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4).toEqual([[0, 1, 2, 3], [4, 5, 6, 7], [8]]));
+	});
+});
