@@ -90,3 +90,20 @@ describe('repeatStringNumTimes', function() {
 		expect(repeatStringNumTimes('*', -3)).toEqual('');
 	});
 });
+
+describe('truncateString', function() {
+	it('Truncate a string first argument if it is longer than the given maximum string length second argument. Return the truncated string with a ... ending.', function() {
+		expect(truncateString('A-tisket a-tasket A green and yellow basket', 11)).toEqual('A-tisket...');
+	});
+	it('Truncate a string first argument if it is longer than the given maximum string length second argument. Return the truncated string with a ... ending.', function() {
+		expect(truncateString('A-', 1)).toEqual('A...');
+	});
+	it('Truncate a string first argument if it is longer than the given maximum string length second argument. Return the truncated string with a ... ending.', function() {
+		expect(
+			truncateString(
+				'A-tisket a-tasket A green and yellow basket',
+				'A-tisket a-tasket A green and yellow basket'.length
+			)
+		).toEqual('A-tisket a-tasket A green and yellow basket');
+	});
+});
