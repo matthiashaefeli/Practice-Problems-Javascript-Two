@@ -84,3 +84,25 @@ function repeatStringNumTimes(string, num) {
 		return stringArray.join('');
 	}
 }
+
+function truncateString(string, num) {
+	if (string.length <= num) {
+		return string;
+	} else if (string.length < 3) {
+		var myRe = /\w/g;
+		var newStr = string.match(myRe);
+		return newStr + '...';
+	} else if (num < 3) {
+		var stringArray = [];
+		for (var i = 0; i < 2; i++) {
+			stringArray.push(string.split('')[i]);
+		}
+		return stringArray.join('') + '...';
+	} else {
+		var stringArray = [];
+		for (var i = 0; i < num - 3; i++) {
+			stringArray.push(string.split('')[i]);
+		}
+		return stringArray.join('') + '...';
+	}
+}
