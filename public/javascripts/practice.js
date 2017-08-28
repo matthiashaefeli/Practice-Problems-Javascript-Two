@@ -106,3 +106,16 @@ function truncateString(string, num) {
 		return stringArray.join('') + '...';
 	}
 }
+
+function chunkArrayInGroups(array, num) {
+	var finalArray = [];
+	var numArray = [];
+	for (i = 0; i < array.length; i++) {
+		numArray.push(array[i]);
+		if (numArray.length == num || i == array.length - 1) {
+			finalArray.push(numArray);
+			numArray = [];
+		}
+	}
+	return finalArray;
+}
