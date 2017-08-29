@@ -122,3 +122,15 @@ describe('chunkArrayInGroups', function() {
 		expect(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4)).toEqual([[0, 1, 2, 3], [4, 5, 6, 7], [8]]);
 	});
 });
+
+describe('slasher', function() {
+	it('Return the remaining elements of an array after chopping off n elements from the head.', function() {
+		expect(slasher([1, 2, 3], 2)).toEqual([3]);
+	});
+	it('Return the remaining elements of an array after chopping off n elements from the head.', function() {
+		expect(slasher([1, 2, 3], 0)).toEqual([1, 2, 3]);
+	});
+	it('Return the remaining elements of an array after chopping off n elements from the head.', function() {
+		expect(slasher([1, 2, 3], 0)).toEqual([]);
+	});
+});
