@@ -119,3 +119,5 @@ function chunkArrayInGroups(array, num) {
 	}
 	return finalArray;
 }
+
+function slasher(array, num) {}
