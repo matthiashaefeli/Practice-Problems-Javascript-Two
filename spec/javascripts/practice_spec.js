@@ -131,6 +131,6 @@ describe('slasher', function() {
 		expect(slasher([1, 2, 3], 0)).toEqual([1, 2, 3]);
 	});
 	it('Return the remaining elements of an array after chopping off n elements from the head.', function() {
-		expect(slasher([1, 2, 3], 0)).toEqual([]);
+		expect(slasher([1, 2, 3], 9)).toEqual([]);
 	});
 });
