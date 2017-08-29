@@ -120,4 +120,13 @@ function chunkArrayInGroups(array, num) {
 	return finalArray;
 }
 
-function slasher(array, num) {}
+function slasher(array, num) {
+	if (num > array.length) {
+		return [];
+	} else {
+		for (var i = 0; i < num; i++) {
+			array.shift();
+		}
+		return array;
+	}
+}
