@@ -146,3 +146,18 @@ describe('mutation', function() {
 		expect(mutation(['hello', 'hey'])).toEqual(false);
 	});
 });
+
+describe('bouncer', function() {
+	it('Remove all falsy values from an array', function() {
+		expect(bouncer([7, 'ate', '', false, 9])).toEqual([7, 'ate', 9]);
+	});
+	it('Remove all falsy values from an array', function() {
+		expect(bouncer([false, null, 0, NaN, undefined, ''])).toEqual([]);
+	});
+	it('Remove all falsy values from an array', function() {
+		expect(bouncer([1, null, NaN, 2, undefined])).toEqual([1, 2]);
+	});
+	it('Remove all falsy values from an array', function() {
+		expect(bouncer(['a', 'b', 'c'])).toEqual(['a', 'b', 'c']);
+	});
+});
