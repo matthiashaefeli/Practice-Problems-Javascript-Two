@@ -130,3 +130,18 @@ function slasher(array, num) {
 		return array;
 	}
 }
+
+function mutation(array) {
+	var includeLetters = array[0].toLowerCase();
+	var letters = array[1].toLowerCase().split('');
+	var sum = 0;
+	for (var i = 0; i < letters.length; i++)
+		if (includeLetters.includes(letters[i])) {
+			sum += 1;
+		}
+	if (sum == letters.length) {
+		return true;
+	} else {
+		return false;
+	}
+}
