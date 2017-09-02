@@ -156,3 +156,18 @@ function bouncer(array) {
 	}
 	return result;
 }
+
+function destroyer() {
+	var result = [];
+	var arg = [];
+	for (var i = 1; i < arguments.length; i++) {
+		arg.push(arguments[i]);
+	}
+	for (var i = 0; i < arguments[0].length; i++) {
+		if (arg.includes(arguments[0][i])) {
+		} else {
+			result.push(arguments[0][i]);
+		}
+	}
+	return result;
+}
