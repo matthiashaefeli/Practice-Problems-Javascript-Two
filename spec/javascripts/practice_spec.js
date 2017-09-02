@@ -161,3 +161,15 @@ describe('bouncer', function() {
 		expect(bouncer(['a', 'b', 'c'])).toEqual(['a', 'b', 'c']);
 	});
 });
+
+describe('destroyer', function() {
+	it('Remove all elements from the initial array that are of the same value as these arguments', function() {
+		expect(destroyer([1, 2, 3, 1, 2, 3], 2, 3)).toEqual([1, 1]);
+	});
+	it('Remove all elements from the initial array that are of the same value as these arguments', function() {
+		expect(destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3)).toEqual([1, 5, 1]);
+	});
+	it('Remove all elements from the initial array that are of the same value as these arguments', function() {
+		expect(destroyer(['tree', 'hamburger', 53], 'tree', 53)).toEqual(['hamburger']);
+	});
+});
