@@ -145,3 +145,14 @@ function mutation(array) {
 		return false;
 	}
 }
+
+function bouncer(array) {
+	var result = [];
+	for (var i = 0; i < array.length; i++) {
+		a = array[i] ? 'truthy' : 'falsy';
+		if (a == 'truthy') {
+			result.push(array[i]);
+		}
+	}
+	return result;
+}
