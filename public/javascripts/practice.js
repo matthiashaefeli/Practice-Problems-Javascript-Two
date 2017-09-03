@@ -171,3 +171,14 @@ function destroyer() {
 	}
 	return result;
 }
+
+function getIndexToIns(array, num) {
+	var sortedArray = array.sort(sortNumber);
+	for (var i = 0; i < array.length; i++) {
+		if (num <= sortedArray[i]) {
+			return sortedArray.indexOf(sortedArray[i]);
+		} else if (num > sortedArray[array.length - 1]) {
+			return array.length;
+		}
+	}
+}
