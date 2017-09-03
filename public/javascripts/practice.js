@@ -182,3 +182,48 @@ function getIndexToIns(array, num) {
 		}
 	}
 }
+
+function rot13(string) {
+	var result = [];
+	var alphabet = [
+		'A',
+		'B',
+		'C',
+		'D',
+		'E',
+		'F',
+		'G',
+		'H',
+		'I',
+		'J',
+		'K',
+		'L',
+		'M',
+		'N',
+		'O',
+		'P',
+		'Q',
+		'R',
+		'S',
+		'T',
+		'U',
+		'V',
+		'W',
+		'X',
+		'Y',
+		'Z'
+	];
+	var splitString = string.split('');
+	for (var i = 0; i < splitString.length; i++) {
+		if (alphabet.includes(splitString[i])) {
+			var newIndex = alphabet.indexOf(splitString[i]) + 13;
+			if (newIndex >= alphabet.length) {
+				newIndex = newIndex - alphabet.length;
+			}
+			result.push(alphabet[newIndex]);
+		} else {
+			result.push(splitString[i]);
+		}
+	}
+	return result.join('');
+}
