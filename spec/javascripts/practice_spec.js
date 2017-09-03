@@ -191,3 +191,12 @@ describe('getIndexToIns', function() {
 		expect(getIndexToIns([2, 5, 10], 15)).toEqual(3);
 	});
 });
+
+describe('rot13', function() {
+	it('takes a ROT13 encoded string as input and returns a decoded string', function() {
+		expect(rot13('SERR PBQR PNZC')).toEqual('FREE CODE CAMP');
+	});
+	it('takes a ROT13 encoded string as input and returns a decoded string', function() {
+		expect(rot13('SERR CVMMN!')).toEqual('FREE PIZZA!');
+	});
+});
