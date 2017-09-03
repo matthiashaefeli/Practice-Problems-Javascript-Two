@@ -184,4 +184,10 @@ describe('getIndexToIns', function() {
 	it('Return the lowest index at which a value (second argument) should be inserted into an array', function() {
 		expect(getIndexToIns([3, 10, 5], 3)).toEqual(0);
 	});
+	it('Return the lowest index at which a value (second argument) should be inserted into an array', function() {
+		expect(getIndexToIns([5, 3, 20, 3], 5)).toEqual(2);
+	});
+	it('Return the lowest index at which a value (second argument) should be inserted into an array', function() {
+		expect(getIndexToIns([2, 5, 10], 15)).toEqual(3);
+	});
 });
