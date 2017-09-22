@@ -205,4 +205,7 @@ describe('sumAll', function(){
 	it('Return the sum of the given two numbers and all numbers between them.', function() {
 		expect(sumAll([1, 4])).toEqual(10)
 	});
+	it('Return the sum of the given two numbers and all numbers between them.', function() {
+		expect(sumAll([10, 5])).toEqual(45)
+	});
 });
