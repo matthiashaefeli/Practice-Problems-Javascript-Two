@@ -229,8 +229,9 @@ function rot13(string) {
 }
 
 function sumAll(numberArray) {
+	var sortedArray = numberArray.sort(sortNumber)
 	var newArray = []
-	for (var i = numberArray[0]; i < numberArray[1] + 1; i++) {
+	for (var i = sortedArray[0]; i < sortedArray[1] + 1; i++) {
 		newArray.push(i)
 	}
 	var sum = 0
