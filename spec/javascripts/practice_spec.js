@@ -200,3 +200,9 @@ describe('rot13', function() {
 		expect(rot13('SERR CVMMN!')).toEqual('FREE PIZZA!');
 	});
 });
+
+describe('sumAll', function(){
+	it('Return the sum of the given two numbers and all numbers between them.', function() {
+		expect(sumAll([1, 4])).toEqual(10)
+	});
+});

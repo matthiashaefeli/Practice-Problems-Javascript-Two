@@ -227,3 +227,15 @@ function rot13(string) {
 	}
 	return result.join('');
 }
+
+function sumAll(numberArray) {
+	var newArray = []
+	for (var i = numberArray[0]; i < numberArray[1] + 1; i++) {
+		newArray.push(i)
+	}
+	var sum = 0
+	for (var i = 0; i < newArray.length; i++) {
+		sum += newArray[i]
+	}
+	return sum
+}
