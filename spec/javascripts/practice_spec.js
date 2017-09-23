@@ -221,3 +221,21 @@ describe('diffArray', function() {
 		expect(diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])).toEqual(["pink wool", "diorite"])
 	})
 })
+
+describe('convertToRoman', function() {
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(2)).toEqual(II)
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(5)).toEqual(V)
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(9)).toEqual(IX)
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(16)).toEqual(XVI)
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(2014)).toEqual(MMXIV)
+	})
+})
