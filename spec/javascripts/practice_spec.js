@@ -260,3 +260,15 @@ describe('convertToRoman', function() {
 		expect(convertToRoman(2014)).toEqual("MMXIV")
 	})
 })
+
+describe('whatIsInAName', function() {
+	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs',function() {
+		expect(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" })).toEqual([{ first: "Tybalt", last: "Capulet" }])
+	})
+	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs',function() {
+		expect(whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 })).toEqual([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }])
+	})
+	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs',function() {
+		expect(whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "c": 2 })).toEqual([{ "a": 1, "b": 2, "c": 2 }])
+	})
+})
