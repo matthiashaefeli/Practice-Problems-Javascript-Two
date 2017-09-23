@@ -240,3 +240,17 @@ function sumAll(numberArray) {
 	}
 	return sum
 }
+
+function diffArray(array1, array2) {
+	var finalArray = [];
+	for (var i = 0; i < array1.length; i++) {
+		if (array2.includes(array1[i]) == false) {
+			finalArray.push(array1[i])
+		}
+	} for (var i = 0; i < array2.length; i++) {
+		if (array1.includes(array2[i]) == false) {
+			finalArray.push(array2[i])
+		}
+	}return finalArray
+
+}
