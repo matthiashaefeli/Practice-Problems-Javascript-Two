@@ -209,3 +209,15 @@ describe('sumAll', function(){
 		expect(sumAll([10, 5])).toEqual(45)
 	});
 });
+
+describe('diffArray', function() {
+	it('return the symmetric difference of the two arrays', function() {
+		expect(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])).toEqual(4)
+	})
+	it('return the symmetric difference of the two arrays', function() {
+		expect(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])).toEqual(["pink wool"])
+	})
+	it('return the symmetric difference of the two arrays', function() {
+		expect(diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])).toEqual(["diorite", "pink wool"])
+	})
+})
