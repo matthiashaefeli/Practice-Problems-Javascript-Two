@@ -224,18 +224,39 @@ describe('diffArray', function() {
 
 describe('convertToRoman', function() {
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(2)).toEqual(II)
+		expect(convertToRoman(2)).toEqual("II")
 	})
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(5)).toEqual(V)
+		expect(convertToRoman(5)).toEqual("V")
 	})
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(9)).toEqual(IX)
+		expect(convertToRoman(8)).toEqual("VIII")
 	})
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(16)).toEqual(XVI)
+		expect(convertToRoman(9)).toEqual("IX")
 	})
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(2014)).toEqual(MMXIV)
+		expect(convertToRoman(10)).toEqual("X")
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(16)).toEqual("XVI")
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(44)).toEqual("XLIV")
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(68)).toEqual("LXVIII")
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(83)).toEqual("LXXXIII")
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(500)).toEqual("D")
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(649)).toEqual("DCXLIX")
+	})
+	it('Convert the given number into a roman numeral', function() {
+		expect(convertToRoman(2014)).toEqual("MMXIV")
 	})
 })

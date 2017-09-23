@@ -252,5 +252,77 @@ function diffArray(array1, array2) {
 			finalArray.push(array2[i])
 		}
 	}return finalArray
+}
+
+function convertToRoman(num) {
+	var result = "";
+	var thousands = Math.floor(num % 10000 /1000);
+         if (thousands < 4) {
+      		for (i = 0; i < thousands; i++) {
+      			result += "M";
+      		}
+      	}else if (thousands < 5) {
+      		result += "MV";
+      	}else if (undreds < 9) {
+      		result += "V";
+      		for (i = 5; i < thousands; i++) {
+      			result += "M";
+      		}
+      	}else {
+      		result += "M(X)";
+      	}
+   var hundreds = Math.floor(num/100 % 10);
+      	if (hundreds < 4) {
+      		for (i = 0; i < hundreds; i++) {
+      			result += "C";
+      		}
+      	}else if (hundreds < 5) {
+      		result += "CD";
+      	}else if (hundreds < 9) {
+      		result += "D";
+      		for (i = 5; i < hundreds; i++) {
+      			result += "C";
+      		}
+      	}else {
+      		result += "CM";
+      	}
+   var tens = Math.floor(num/10 % 10);
+      	if (tens < 4) {
+      		for (i = 0; i < tens; i++) {
+      			result += "X";
+      		}
+      	}else if (tens < 5) {
+      		result += "XL";
+      	}else if (tens < 9) {
+      		result += "L";
+      		for (i = 5; i < tens; i++) {
+      			result += "X";
+      		}
+      	}else {
+      		result += "XC";
+      	}
+    var ones = Math.floor(num % 10);
+  			if(ones < 4) {
+  				for (i = 0; i < ones; i++) {
+  					result += "I";
+  				}
+  			}else if (ones < 5) {
+  				result += "IV";
+  			}else if (ones < 9) {
+  				result += "V";
+  				for (i = 5; i < ones; i++) {
+  					result += "I";
+  				}
+  				}else {
+  					result += "IX";
+  			}
+
+
+      tenThousands = Math.floor(num / 10000 % 10),
+      hundredThousands = Math.floor(num / 100000 % 10),
+      millions = Math.floor(num / 1000000 % 10),
+      tenMillions = Math.floor(num / 10000000 % 10),
+      hundredMillions = Math.floor(num / 100000000 % 10);
+ 			return result;
 
 }
