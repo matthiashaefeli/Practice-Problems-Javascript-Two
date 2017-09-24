@@ -308,3 +308,15 @@ describe('pairElement', function() {
 		expect(pairElement("CTCTA")).toEqual([["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]])
 	})
 })
+
+describe('fearNotLetter', function() {
+	it('Find the missing letter in the passed letter range and return it.', function() {
+		expect(fearNotLetter("abce")).toEqual("d")
+	})
+	it('Find the missing letter in the passed letter range and return it.', function() {
+		expect(fearNotLetter("yz")).toEqual(undefined)
+	})
+	it('Find the missing letter in the passed letter range and return it.', function() {
+		expect(fearNotLetter("abcdefghjklmno")).toEqual("i")
+	})
+})
