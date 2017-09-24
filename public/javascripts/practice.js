@@ -324,23 +324,26 @@ function convertToRoman(num) {
  			return result;
 }
 
-function whatIsInAName(objects, source) {
-	var result = []
-	for (var a = 0; a < Object.keys(source).length; a++) {
-		for (var b = 0; b < objects.length; b++) {
-			for (var c = 0; c < Object.keys(objects[b]).length; c++) {
-				if (Object.keys(objects[b])[c] === Object.keys(source)[a]){
-					if (Object.values(objects[b])[c] === Object.values(source)[a]) {
-						result.push(objects[b])
-					}
-				}
-			}
-		}
-	}return result
+
+
+function checkIfObjectContains(one, two){
+   for (var i in one) {
+           if (! two.hasOwnProperty(i) || one[i] !== two[i] ) {
+              return false;
+           }       
+   }
+   return true;
 }
 
-
-
+function whatIsInAName(objects, source) {
+	var result = []
+	for (i = 0; i < objects.length; i++) {
+		if (checkIfObjectContains(source, objects[i])) {
+			result.push(objects[i])
+		}
+	}
+	return result
+}
 
 
 
