@@ -395,4 +395,33 @@ function translatePigLatin(string) {
 	}return result.join("")+consonant.join("")+"ay";
 }
 
+function pairElement(str) {
+	var result = [];
+	var dn = [];
+	for (var i = 0; i < str.length; i++) {
+		if (str[i] === "A") {
+			dn.push(str[i]);
+			dn.push("T");
+			result.push(dn);
+			dn = [];
+		}else if (str[i] === "T") {
+			dn.push(str[i]);
+			dn.push("A");
+			result.push(dn);
+			dn = [];
+		}else if (str[i] === "G") {
+			dn.push(str[i]);
+			dn.push("C");
+			result.push(dn);
+			dn =[];
+		}else if (str[i] === "C") {
+			dn.push(str[i]);
+			dn.push("G");
+			result.push(dn);
+			dn =[];
+		}
+	}
+	return result
+}
+
 
