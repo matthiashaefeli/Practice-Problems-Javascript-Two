@@ -272,3 +272,15 @@ describe('whatIsInAName', function() {
 		expect(whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "c": 2 })).toEqual([{ "a": 1, "b": 2, "c": 2 }])
 	})
 })
+
+describe('myReplace', function() {
+	it('Perform a search and replace on the sentence using the arguments provided and return the new sentence', function() {
+		expect(myReplace("Let us go to the store", "store", "mall")).toEqual("Let us go to the mall")
+	})
+	it('Perform a search and replace on the sentence using the arguments provided and return the new sentence', function() {
+		expect(myReplace("Let us get back to more Coding", "Coding", "algorithms")).toEqual("Let us get back to more Algorithms")
+	})
+	it('Perform a search and replace on the sentence using the arguments provided and return the new sentence', function() {
+		expect(myReplace("This has a spellngi error", "spellngi", "spelling")).toEqual("This has a spelling error")
+	})
+})
