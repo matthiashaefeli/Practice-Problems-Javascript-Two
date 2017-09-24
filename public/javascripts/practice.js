@@ -316,13 +316,31 @@ function convertToRoman(num) {
   				}else {
   					result += "IX";
   			}
-
-
       tenThousands = Math.floor(num / 10000 % 10),
       hundredThousands = Math.floor(num / 100000 % 10),
       millions = Math.floor(num / 1000000 % 10),
       tenMillions = Math.floor(num / 10000000 % 10),
       hundredMillions = Math.floor(num / 100000000 % 10);
  			return result;
-
 }
+
+function whatIsInAName(objects, source) {
+	var result = []
+	for (var a = 0; a < Object.keys(source).length; a++) {
+		for (var b = 0; b < objects.length; b++) {
+			for (var c = 0; c < Object.keys(objects[b]).length; c++) {
+				if (Object.keys(objects[b])[c] === Object.keys(source)[a]){
+					if (Object.values(objects[b])[c] === Object.values(source)[a]) {
+						result.push(objects[b])
+					}
+				}
+			}
+		}
+	}return result
+}
+
+
+
+
+
+
