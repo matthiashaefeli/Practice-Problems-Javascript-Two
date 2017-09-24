@@ -346,4 +346,35 @@ function whatIsInAName(objects, source) {
 }
 
 
+function isUppercase(string) {
+
+	if (string[0] === string[0].toUpperCase()) {
+		return true
+	}else {
+		return false
+	}
+}
+
+
+function toUppercase(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function myReplace(str, before, after) {
+	var newAfter = ""
+	if (isUppercase(before) === true) {
+		newAfter = toUppercase(after)
+	}else {
+		newAfter = after
+	}
+	var result = []
+	var newStr = str.split(" ")
+	for (var i = 0; i < newStr.length; i++) {
+		if (newStr[i] === before) {
+			result.push(newAfter)
+		}else {
+			result.push(newStr[i])
+		}
+	}return result.join(" ")
+}
 
