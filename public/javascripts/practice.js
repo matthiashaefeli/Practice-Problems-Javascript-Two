@@ -378,3 +378,21 @@ function myReplace(str, before, after) {
 	}return result.join(" ");
 }
 
+
+function translatePigLatin(string) {
+	var vowels = ['a','e','i','o','u'];
+	var result = [];
+	var consonant = [];
+	for (var i = 0; i < string.length; i++) {
+		if (vowels.includes(string[0])) {
+		return string+"way";
+	}else if (! vowels.includes(string[i])) {
+			consonant.push(string[i]);
+		}else {
+			result.push(string.substring(i, string.length))
+			i = string.length;
+		}
+	}return result.join("")+consonant.join("")+"ay";
+}
+
+
