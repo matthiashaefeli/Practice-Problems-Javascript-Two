@@ -229,29 +229,29 @@ function rot13(string) {
 }
 
 function sumAll(numberArray) {
-	var sortedArray = numberArray.sort(sortNumber)
-	var newArray = []
+	var sortedArray = numberArray.sort(sortNumber);
+	var newArray = [];
 	for (var i = sortedArray[0]; i < sortedArray[1] + 1; i++) {
-		newArray.push(i)
+		newArray.push(i);
 	}
-	var sum = 0
+	var sum = 0;
 	for (var i = 0; i < newArray.length; i++) {
-		sum += newArray[i]
+		sum += newArray[i];
 	}
-	return sum
+	return sum;
 }
 
 function diffArray(array1, array2) {
 	var finalArray = [];
 	for (var i = 0; i < array1.length; i++) {
 		if (array2.includes(array1[i]) == false) {
-			finalArray.push(array1[i])
+			finalArray.push(array1[i]);
 		}
 	} for (var i = 0; i < array2.length; i++) {
 		if (array1.includes(array2[i]) == false) {
-			finalArray.push(array2[i])
+			finalArray.push(array2[i]);
 		}
-	}return finalArray
+	}return finalArray;
 }
 
 function convertToRoman(num) {
@@ -336,22 +336,22 @@ function checkIfObjectContains(one, two){
 }
 
 function whatIsInAName(objects, source) {
-	var result = []
+	var result = [];
 	for (i = 0; i < objects.length; i++) {
 		if (checkIfObjectContains(source, objects[i])) {
-			result.push(objects[i])
+			result.push(objects[i]);
 		}
 	}
-	return result
+	return result;
 }
 
 
 function isUppercase(string) {
 
 	if (string[0] === string[0].toUpperCase()) {
-		return true
+		return true;
 	}else {
-		return false
+		return false;
 	}
 }
 
@@ -361,20 +361,20 @@ function toUppercase(string) {
 }
 
 function myReplace(str, before, after) {
-	var newAfter = ""
+	var newAfter = "";
 	if (isUppercase(before) === true) {
-		newAfter = toUppercase(after)
+		newAfter = toUppercase(after);
 	}else {
-		newAfter = after
+		newAfter = after;
 	}
-	var result = []
-	var newStr = str.split(" ")
+	var result = [];
+	var newStr = str.split(" ");
 	for (var i = 0; i < newStr.length; i++) {
 		if (newStr[i] === before) {
-			result.push(newAfter)
+			result.push(newAfter);
 		}else {
-			result.push(newStr[i])
+			result.push(newStr[i]);
 		}
-	}return result.join(" ")
+	}return result.join(" ");
 }
 

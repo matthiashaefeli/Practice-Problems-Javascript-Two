@@ -284,3 +284,15 @@ describe('myReplace', function() {
 		expect(myReplace("This has a spellngi error", "spellngi", "spelling")).toEqual("This has a spelling error")
 	})
 })
+
+describe('translatePigLatin', function() {
+	it('Translate the provided string to pig latin', function() {
+		expect(translatePigLatin("california")).toEqual("aliforniacay")
+	})
+	it('Translate the provided string to pig latin', function() {
+		expect(translatePigLatin("paragraphs")).toEqual("aragraphspay")
+	})
+	it('Translate the provided string to pig latin', function() {
+		expect(translatePigLatin("eight")).toEqual("eightway")
+	})
+})
