@@ -424,4 +424,41 @@ function pairElement(str) {
 	return result
 }
 
+function fearNotLetter(str) {
+	var alphabet = [
+		'a',
+		'b',
+		'c',
+		'd',
+		'e',
+		'f',
+		'g',
+		'h',
+		'i',
+		'j',
+		'k',
+		'l',
+		'm',
+		'n',
+		'o',
+		'p',
+		'q',
+		'r',
+		's',
+		't',
+		'u',
+		'v',
+		'w',
+		'x',
+		'y',
+		'z'
+	];
+	var letterIndex = alphabet.indexOf(str[0]);
+	for (var i = 0, itwo = letterIndex; i < str.length; i++, itwo++) {
+		if (alphabet[itwo] != str[i]) {
+			return alphabet[itwo]
+		}
+	}
+}
+
 
