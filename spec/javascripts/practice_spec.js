@@ -320,3 +320,18 @@ describe('fearNotLetter', function() {
 		expect(fearNotLetter("abcdefghjklmno")).toEqual("i")
 	})
 })
+
+describe('booWho', function() {
+	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
+		expect(booWho(true)).toEqual(true)
+	})
+	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
+		expect(booWho(false)).toEqual(true)
+	})
+	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
+		expect(booWho([1, 2, 3])).toEqual(false)
+	})
+	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
+		expect(booWho(NaN)).toEqual(false)
+	})
+})
