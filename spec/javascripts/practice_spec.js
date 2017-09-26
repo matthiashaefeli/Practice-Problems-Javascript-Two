@@ -350,3 +350,18 @@ describe('uniteUnique', function() {
 		expect(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])).toEqual([1, 2, 3, 5, 4, 6, 7, 8])
 	})
 })
+
+describe('convertHTML', function() {
+	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
+		expect(convertHTML("Dolce & Gabbana")).toEqual('Dolce &​amp; Gabbana')
+	})
+	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
+		expect(convertHTML("Hamburgers < Pizza < Tacos")).toEqual('Hamburgers &​lt; Pizza &​lt; Tacos')
+	})
+	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
+		expect(convertHTML("Shindler's List")).toEqual('Shindler&​apos;s List')
+	})
+	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
+		expect(convertHTML("abc")).toEqual('abc')
+	})
+})

@@ -478,5 +478,4 @@ function uniteUnique(array) {
 			}
 		}
 	}return newArray
-
 }
