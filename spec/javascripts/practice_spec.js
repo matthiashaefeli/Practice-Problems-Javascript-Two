@@ -353,15 +353,15 @@ describe('uniteUnique', function() {
 
 describe('convertHTML', function() {
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("Dolce & Gabbana")).toEqual('Dolce &​amp; Gabbana')
+		expect(convertHTML("Dolce & Gabbana")).toEqual("Dolce &amp; Gabbana")
 	})
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("Hamburgers < Pizza < Tacos")).toEqual('Hamburgers &​lt; Pizza &​lt; Tacos')
+		expect(convertHTML("Hamburgers < Pizza < Tacos")).toEqual("Hamburgers &lt; Pizza &lt; Tacos")
 	})
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("Shindler's List")).toEqual('Shindler&​apos;s List')
+		expect(convertHTML("Shindler's List")).toEqual("Shindler&apos;s List")
 	})
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("abc")).toEqual('abc')
+		expect(convertHTML("abc")).toEqual("abc")
 	})
 })
