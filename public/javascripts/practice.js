@@ -469,3 +469,14 @@ function booWho(bool) {
 	}
 }
 
+function uniteUnique(array) {
+	var newArray = []
+	for (var i = 0; i < arguments.length; i++) {
+		for (var itwo = 0; itwo < arguments[i].length; itwo++) {
+			if (! newArray.includes(arguments[i][itwo])) {
+				newArray.push(arguments[i][itwo])
+			}
+		}
+	}return newArray
+
+}
