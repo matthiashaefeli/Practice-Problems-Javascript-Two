@@ -365,3 +365,18 @@ describe('convertHTML', function() {
 		expect(convertHTML("abc")).toEqual("abc")
 	})
 })
+
+describe('spinalCase', function() {
+	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
+		expect(spinalCase("This Is Spinal Tap")).toEqual("this-is-spinal-tap")
+	})
+	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
+		expect(spinalCase("thisIsSpinalTap")).toEqual("this-is-spinal-tap")
+	})
+	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
+		expect(spinalCase("The_Andy_Griffith_Show")).toEqual("the-andy-griffith-show")
+	})
+	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
+		expect(spinalCase("AllThe-small Things")).toEqual("all-the-small-things")
+	})
+})

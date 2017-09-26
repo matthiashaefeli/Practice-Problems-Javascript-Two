@@ -480,7 +480,26 @@ function uniteUnique(array) {
 	}return newArray
 }
 
+// this works perfect but the other one is a better solution
+
+// function convertHTML(string) {
+// 	return string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&apos;").replace(/"/g, "&quot;")
+// }
+
 function convertHTML(string) {
-	return string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&apos;").replace(/"/g, "&quot;")
+  var map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&apos;'
+  };
+
+  return string.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
+
+
+
+
+
 
