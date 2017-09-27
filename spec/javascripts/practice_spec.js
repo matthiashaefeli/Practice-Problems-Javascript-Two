@@ -379,4 +379,7 @@ describe('spinalCase', function() {
 	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
 		expect(spinalCase("AllThe-small Things")).toEqual("all-the-small-things")
 	})
+	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
+		expect(spinalCase("Teletubbies say Eh-oh")).toEqual("teletubbies-say-eh-oh")
+	})
 })
