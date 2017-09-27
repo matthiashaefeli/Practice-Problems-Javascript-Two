@@ -401,9 +401,9 @@ describe('sumFibs', function() {
 
 describe('sumPrimes', function() {
 	it('Sum all the prime numbers up to and including the provided number.', function() {
-		expect(sumFibs(10)).toEqual(17)
+		expect(sumPrimes(10)).toEqual(17)
 	})
 	it('Sum all the prime numbers up to and including the provided number.', function() {
-		expect(sumFibs(977)).toEqual(73156)
+		expect(sumPrimes(977)).toEqual(73156)
 	})
 })
