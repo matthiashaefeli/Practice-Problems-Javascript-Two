@@ -508,5 +508,23 @@ function spinalCase(string) {
 return newStr.replace(/ /g, '-').replace(/([A-Z])/g, '-$1').toLowerCase().replace(/ |_/g, "").replace(/--/g, "-");
 }
 
-
+function sumFibs(number) {
+	var result = 0;
+	var oddNumbers = [];
+	var newOddNumbers = [];
+	var fib = [1, 1];
+	while (fib[fib.length - 1] < number) {
+		fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+	}for (var i = 0; i < fib.length; i++) {
+		if (fib[i]%2 !== 0  ) {
+			oddNumbers.push(fib[i]);
+		}
+	}for (var a = 0; a < oddNumbers.length; a++) {
+		if (oddNumbers[a] <= number) {
+			newOddNumbers.push(oddNumbers[a]);
+		}
+	}for (var b = 0; b < newOddNumbers.length; b++) {
+		result += newOddNumbers[b];
+	} return result;
+}
 
