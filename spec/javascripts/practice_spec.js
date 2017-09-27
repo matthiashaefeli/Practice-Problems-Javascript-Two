@@ -383,3 +383,18 @@ describe('spinalCase', function() {
 		expect(spinalCase("Teletubbies say Eh-oh")).toEqual("teletubbies-say-eh-oh")
 	})
 })
+
+describe('sumFibs', function() {
+	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
+		expect(sumFibs(1000)).toEqual(1785)
+	})
+	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
+		expect(sumFibs(4000000)).toEqual(4613732)
+	})
+	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
+		expect(sumFibs(4)).toEqual(5)
+	})
+	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
+		expect(sumFibs(75025)).toEqual(135721)
+	})
+})
