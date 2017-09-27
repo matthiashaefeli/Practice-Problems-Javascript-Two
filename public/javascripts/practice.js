@@ -498,7 +498,9 @@ function convertHTML(string) {
   return string.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
 
-
+function spinalCase(string) {
+	
+}
 
 
 
