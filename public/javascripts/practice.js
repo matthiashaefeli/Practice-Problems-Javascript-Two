@@ -555,3 +555,14 @@ function sumPrimes(number) {
 		result += primesNumbers[a];
 	}return result;
 }
+
+function smallestCommons(arr) {
+	
+}
+
+
+
+
+
+
+
