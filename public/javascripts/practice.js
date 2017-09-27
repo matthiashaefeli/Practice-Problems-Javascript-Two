@@ -498,10 +498,15 @@ function convertHTML(string) {
   return string.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
 
-function spinalCase(string) {
-	
+
+function toLowercase(string) {
+    return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
+function spinalCase(string) {
+	var newStr = toLowercase(string);
+return newStr.replace(/ /g, '-').replace(/([A-Z])/g, '-$1').toLowerCase().replace(/ |_/g, "").replace(/--/g, "-");
+}
 
 
 
