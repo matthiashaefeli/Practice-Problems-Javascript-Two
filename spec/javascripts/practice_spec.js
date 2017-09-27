@@ -401,9 +401,21 @@ describe('sumFibs', function() {
 
 describe('sumPrimes', function() {
 	it('Sum all the prime numbers up to and including the provided number.', function() {
-		expect(sumFibs(10)).toEqual(17)
+		expect(sumPrimes(10)).toEqual(17)
 	})
 	it('Sum all the prime numbers up to and including the provided number.', function() {
-		expect(sumFibs(977)).toEqual(73156)
+		expect(sumPrimes(977)).toEqual(73156)
+	})
+})
+
+describe('smallestCommons', function(){
+	it('Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters', function() {
+		expect(smallestCommons([1, 5])).toEqual(60)
+	})
+	it('Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters', function() {
+		expect(smallestCommons([1, 13])).toEqual(360360)
+	})
+	it('Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters', function() {
+		expect(smallestCommons([23, 18])).toEqual(6056820)
 	})
 })

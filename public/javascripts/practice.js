@@ -528,3 +528,41 @@ function sumFibs(number) {
 	} return result;
 }
 
+
+function isPrime(n){
+  if (n===1) {
+    return false;
+  }else if(n === 2) {
+    return true;
+  }else {
+    for(var x = 2; x < n; x++) {
+      if(n % x === 0) {
+        return false;
+      }
+    }return true;  
+  }
+}
+
+function sumPrimes(number) {
+	var result = 0;
+	var primesNumbers = [];
+	for (var i = 0; i < number + 1; i++) {
+		if (isPrime(i) === true) {
+			primesNumbers.push(i);
+		}
+	} 
+	for (var a = 0; a < primesNumbers.length; a++) {
+		result += primesNumbers[a];
+	}return result;
+}
+
+function smallestCommons(arr) {
+	
+}
+
+
+
+
+
+
+
