@@ -556,8 +556,25 @@ function sumPrimes(number) {
 	}return result;
 }
 
+
+function allDiv(arr, num) {
+	for (var i = 0; i < arr.length; i++) {
+		if (num % arr[i] !== 0) {
+			return false;
+		}
+	}return true;
+}
+
+
+
 function smallestCommons(arr) {
-	
+	var newArr = arr.sort(sortNumber);
+	var finalArr = [];
+	for (var i = newArr[0]; i < newArr[newArr.length - 1]; i++) {
+		finalArr.push(i);
+	} finalArr.push(newArr[newArr.length - 1]);
+		for (var num = finalArr[finalArr.length - 1]; allDiv(finalArr, num) === false; num+=finalArr[finalArr.length - 1]) {
+		}return num;
 }
 
 
