@@ -419,3 +419,12 @@ describe('smallestCommons', function(){
 		expect(smallestCommons([23, 18])).toEqual(6056820)
 	})
 })
+
+describe('findElement', function() {
+	it('looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument)', function() {
+		expect(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })).toEqual(8)
+	})
+	it('looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument)', function() {
+		expect(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })).toEqual(undefined)
+	})
+})
