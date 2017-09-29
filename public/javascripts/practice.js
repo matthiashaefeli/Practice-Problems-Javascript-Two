@@ -577,7 +577,9 @@ function smallestCommons(arr) {
 		}return num;
 }
 
-
+function findElement(arr, func) {
+	
+}
 
 
 
