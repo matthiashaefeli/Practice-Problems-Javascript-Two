@@ -565,8 +565,6 @@ function allDiv(arr, num) {
 	}return true;
 }
 
-
-
 function smallestCommons(arr) {
 	var newArr = arr.sort(sortNumber);
 	var finalArr = [];

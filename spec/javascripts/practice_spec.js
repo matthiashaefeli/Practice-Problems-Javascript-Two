@@ -443,3 +443,15 @@ describe('dropElements', function() {
 		expect(dropElements([1, 2, 3, 4], function(n) {return n > 5;})).toEqual([])
 	})
 })
+
+describe('steamrollArray', function() {
+	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
+		expect(steamrollArray([[["a"]], [["b"]]])).toEqual(["a", "b"])
+	})
+	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
+		expect(steamrollArray([1, [2], [3, [[4]]]])).toEqual([1, 2, 3, 4])
+	})
+	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
+		expect(steamrollArray([1, {}, [3, [[4]]]])).toEqual([1, {}, 3, 4])
+	})
+})
