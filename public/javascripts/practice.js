@@ -585,7 +585,19 @@ function findElement(arr, func) {
 	}
 }
 
-
+function dropElements(arr, func) {
+	var count = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if (func(arr[i]) === false) {
+			count += 1;
+			if (count === arr.length - 1) {
+				return [];
+			}
+		}else {
+			return arr.slice(count);
+		}
+	}
+}
 
 
 

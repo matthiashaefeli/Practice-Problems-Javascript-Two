@@ -439,4 +439,7 @@ describe('dropElements', function() {
 	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
 		expect(dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})).toEqual([3, 9, 2])
 	})
+	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
+		expect(dropElements([1, 2, 3, 4], function(n) {return n > 5;})).toEqual([])
+	})
 })
