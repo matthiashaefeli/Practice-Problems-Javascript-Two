@@ -428,3 +428,15 @@ describe('findElement', function() {
 		expect(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })).toEqual(undefined)
 	})
 })
+
+describe('dropElements', function() {
+	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
+		expect(dropElements([1, 2, 3, 4], function(n) {return n >= 3;})).toEqual([3, 4])
+	})
+	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
+		expect(dropElements([0, 1, 0, 1], function(n) {return n === 1;})).toEqual([1, 0, 1])
+	})
+	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
+		expect(dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})).toEqual([3, 9, 2])
+	})
+})
