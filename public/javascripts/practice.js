@@ -614,5 +614,12 @@ function steamrollArray(arr) {
 	}return finalArray;
 }
 
+function binaryAgent(string) {
+	var numberArray = []
+	var stringArray = string.split(" ")
+	for (var i = 0; i < stringArray.length; i++) {
+		numberArray.push(String.fromCharCode(parseInt(stringArray[i], 2)))
+	}return numberArray.join('')
+}
 
 
