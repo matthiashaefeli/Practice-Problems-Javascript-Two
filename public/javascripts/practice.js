@@ -597,13 +597,22 @@ function dropElements(arr, func) {
 	}
 }
 
-function steamrollArray(array) {
-	for (var i = 0; i < array.length; i++) {
-		if (Array.isArray(array[0]) === true)
 
-
-			
-	}
+function steamrollArray(arr) {
+	var finalArray = [];
+	var number = "";
+	var newArray = arr.join().replace(/,,/g, ',').split(",");
+	for (var i = 0; i < newArray.length; i++) {
+		 number = Number(newArray[i]);
+		 if (newArray[i] === '[object Object]') {
+		 	finalArray.push({});
+		 }
+		else if (isNaN(number)) {
+			finalArray.push(newArray[i]);
+		}else {
+			finalArray.push(number);
+		}
+	}return finalArray;
 }
 
 

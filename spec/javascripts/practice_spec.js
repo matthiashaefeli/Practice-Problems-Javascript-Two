@@ -454,4 +454,8 @@ describe('steamrollArray', function() {
 	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
 		expect(steamrollArray([1, {}, [3, [[4]]]])).toEqual([1, {}, 3, 4])
 	})
+	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
+		expect(steamrollArray([1, [], [3, [[4]]]])).toEqual([1, 3, 4])
+	})
+
 })
