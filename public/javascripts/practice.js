@@ -597,7 +597,6 @@ function dropElements(arr, func) {
 	}
 }
 
-
 function steamrollArray(arr) {
 	var finalArray = [];
 	var number = "";
