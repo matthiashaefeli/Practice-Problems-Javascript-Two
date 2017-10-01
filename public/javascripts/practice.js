@@ -597,5 +597,14 @@ function dropElements(arr, func) {
 	}
 }
 
+function steamrollArray(array) {
+	for (var i = 0; i < array.length; i++) {
+		if (Array.isArray(array[0]) === true)
+
+
+			
+	}
+}
+
 
 
