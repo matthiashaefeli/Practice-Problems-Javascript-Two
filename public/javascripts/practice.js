@@ -657,3 +657,11 @@ function truthCheck(collection, pre) {
 	}
 	return true;
 }
+
+function checkIfNumber(arg) {
+	return Number.isInteger(parseInt(arg));
+}
+
+function addTogether() {
+	debugger;
+}
