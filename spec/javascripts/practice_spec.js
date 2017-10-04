@@ -201,271 +201,358 @@ describe('rot13', function() {
 	});
 });
 
-describe('sumAll', function(){
+describe('sumAll', function() {
 	it('Return the sum of the given two numbers and all numbers between them.', function() {
-		expect(sumAll([1, 4])).toEqual(10)
+		expect(sumAll([1, 4])).toEqual(10);
 	});
 	it('Return the sum of the given two numbers and all numbers between them.', function() {
-		expect(sumAll([10, 5])).toEqual(45)
+		expect(sumAll([10, 5])).toEqual(45);
 	});
 });
 
 describe('diffArray', function() {
 	it('return the symmetric difference of the two arrays', function() {
-		expect(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])).toEqual([4])
-	})
+		expect(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])).toEqual([4]);
+	});
 	it('return the symmetric difference of the two arrays', function() {
-		expect(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])).toEqual(["pink wool"])
-	})
+		expect(
+			diffArray(
+				['diorite', 'andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'],
+				['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']
+			)
+		).toEqual(['pink wool']);
+	});
 	it('return the symmetric difference of the two arrays', function() {
-		expect(diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])).toEqual(["pink wool", "diorite"])
-	})
-})
+		expect(
+			diffArray(
+				['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'],
+				['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']
+			)
+		).toEqual(['pink wool', 'diorite']);
+	});
+});
 
 describe('convertToRoman', function() {
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(2)).toEqual("II")
-	})
+		expect(convertToRoman(2)).toEqual('II');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(5)).toEqual("V")
-	})
+		expect(convertToRoman(5)).toEqual('V');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(8)).toEqual("VIII")
-	})
+		expect(convertToRoman(8)).toEqual('VIII');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(9)).toEqual("IX")
-	})
+		expect(convertToRoman(9)).toEqual('IX');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(10)).toEqual("X")
-	})
+		expect(convertToRoman(10)).toEqual('X');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(16)).toEqual("XVI")
-	})
+		expect(convertToRoman(16)).toEqual('XVI');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(44)).toEqual("XLIV")
-	})
+		expect(convertToRoman(44)).toEqual('XLIV');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(68)).toEqual("LXVIII")
-	})
+		expect(convertToRoman(68)).toEqual('LXVIII');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(83)).toEqual("LXXXIII")
-	})
+		expect(convertToRoman(83)).toEqual('LXXXIII');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(500)).toEqual("D")
-	})
+		expect(convertToRoman(500)).toEqual('D');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(649)).toEqual("DCXLIX")
-	})
+		expect(convertToRoman(649)).toEqual('DCXLIX');
+	});
 	it('Convert the given number into a roman numeral', function() {
-		expect(convertToRoman(2014)).toEqual("MMXIV")
-	})
-})
+		expect(convertToRoman(2014)).toEqual('MMXIV');
+	});
+});
 
 describe('whatIsInAName', function() {
-	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs',function() {
-		expect(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" })).toEqual([{ first: "Tybalt", last: "Capulet" }])
-	})
-	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs',function() {
-		expect(whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 })).toEqual([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }])
-	})
-	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs',function() {
-		expect(whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "c": 2 })).toEqual([{ "a": 1, "b": 2, "c": 2 }])
-	})
-})
+	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs', function() {
+		expect(
+			whatIsInAName(
+				[{ first: 'Romeo', last: 'Montague' }, { first: 'Mercutio', last: null }, { first: 'Tybalt', last: 'Capulet' }],
+				{ last: 'Capulet' }
+			)
+		).toEqual([{ first: 'Tybalt', last: 'Capulet' }]);
+	});
+	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs', function() {
+		expect(whatIsInAName([{ a: 1 }, { a: 1 }, { a: 1, b: 2 }], { a: 1 })).toEqual([{ a: 1 }, { a: 1 }, { a: 1, b: 2 }]);
+	});
+	it('looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs', function() {
+		expect(whatIsInAName([{ a: 1, b: 2 }, { a: 1 }, { a: 1, b: 2, c: 2 }], { a: 1, c: 2 })).toEqual([
+			{ a: 1, b: 2, c: 2 }
+		]);
+	});
+});
 
 describe('myReplace', function() {
 	it('Perform a search and replace on the sentence using the arguments provided and return the new sentence', function() {
-		expect(myReplace("Let us go to the store", "store", "mall")).toEqual("Let us go to the mall")
-	})
+		expect(myReplace('Let us go to the store', 'store', 'mall')).toEqual('Let us go to the mall');
+	});
 	it('Perform a search and replace on the sentence using the arguments provided and return the new sentence', function() {
-		expect(myReplace("Let us get back to more Coding", "Coding", "algorithms")).toEqual("Let us get back to more Algorithms")
-	})
+		expect(myReplace('Let us get back to more Coding', 'Coding', 'algorithms')).toEqual(
+			'Let us get back to more Algorithms'
+		);
+	});
 	it('Perform a search and replace on the sentence using the arguments provided and return the new sentence', function() {
-		expect(myReplace("This has a spellngi error", "spellngi", "spelling")).toEqual("This has a spelling error")
-	})
-})
+		expect(myReplace('This has a spellngi error', 'spellngi', 'spelling')).toEqual('This has a spelling error');
+	});
+});
 
 describe('translatePigLatin', function() {
 	it('Translate the provided string to pig latin', function() {
-		expect(translatePigLatin("california")).toEqual("aliforniacay")
-	})
+		expect(translatePigLatin('california')).toEqual('aliforniacay');
+	});
 	it('Translate the provided string to pig latin', function() {
-		expect(translatePigLatin("paragraphs")).toEqual("aragraphspay")
-	})
+		expect(translatePigLatin('paragraphs')).toEqual('aragraphspay');
+	});
 	it('Translate the provided string to pig latin', function() {
-		expect(translatePigLatin("eight")).toEqual("eightway")
-	})
-})
+		expect(translatePigLatin('eight')).toEqual('eightway');
+	});
+});
 
 describe('pairElement', function() {
 	it('The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.', function() {
-		expect(pairElement("ATCGA")).toEqual([["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]])
-	})
+		expect(pairElement('ATCGA')).toEqual([['A', 'T'], ['T', 'A'], ['C', 'G'], ['G', 'C'], ['A', 'T']]);
+	});
 	it('The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.', function() {
-		expect(pairElement("TTGAG")).toEqual([["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]])
-	})
+		expect(pairElement('TTGAG')).toEqual([['T', 'A'], ['T', 'A'], ['G', 'C'], ['A', 'T'], ['G', 'C']]);
+	});
 	it('The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.', function() {
-		expect(pairElement("CTCTA")).toEqual([["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]])
-	})
-})
+		expect(pairElement('CTCTA')).toEqual([['C', 'G'], ['T', 'A'], ['C', 'G'], ['T', 'A'], ['A', 'T']]);
+	});
+});
 
 describe('fearNotLetter', function() {
 	it('Find the missing letter in the passed letter range and return it.', function() {
-		expect(fearNotLetter("abce")).toEqual("d")
-	})
+		expect(fearNotLetter('abce')).toEqual('d');
+	});
 	it('Find the missing letter in the passed letter range and return it.', function() {
-		expect(fearNotLetter("yz")).toEqual(undefined)
-	})
+		expect(fearNotLetter('yz')).toEqual(undefined);
+	});
 	it('Find the missing letter in the passed letter range and return it.', function() {
-		expect(fearNotLetter("abcdefghjklmno")).toEqual("i")
-	})
-})
+		expect(fearNotLetter('abcdefghjklmno')).toEqual('i');
+	});
+});
 
 describe('booWho', function() {
 	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
-		expect(booWho(true)).toEqual(true)
-	})
+		expect(booWho(true)).toEqual(true);
+	});
 	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
-		expect(booWho(false)).toEqual(true)
-	})
+		expect(booWho(false)).toEqual(true);
+	});
 	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
-		expect(booWho([1, 2, 3])).toEqual(false)
-	})
+		expect(booWho([1, 2, 3])).toEqual(false);
+	});
 	it('Check if a value is classified as a boolean primitive. Return true or false', function() {
-		expect(booWho(NaN)).toEqual(false)
-	})
-})
+		expect(booWho(NaN)).toEqual(false);
+	});
+});
 
 describe('uniteUnique', function() {
 	it('new array of unique values in the order of the original provided arrays', function() {
-		expect(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])).toEqual([1, 3, 2, 5, 4])
-	})
+		expect(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])).toEqual([1, 3, 2, 5, 4]);
+	});
 	it('new array of unique values in the order of the original provided arrays', function() {
-		expect(uniteUnique([1, 3, 2], [1, [5]], [2, [4]])).toEqual([1, 3, 2, [5], [4]])
-	})
+		expect(uniteUnique([1, 3, 2], [1, [5]], [2, [4]])).toEqual([1, 3, 2, [5], [4]]);
+	});
 	it('new array of unique values in the order of the original provided arrays', function() {
-		expect(uniteUnique([1, 2, 3], [5, 2, 1])).toEqual([1, 2, 3, 5])
-	})
+		expect(uniteUnique([1, 2, 3], [5, 2, 1])).toEqual([1, 2, 3, 5]);
+	});
 	it('new array of unique values in the order of the original provided arrays', function() {
-		expect(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])).toEqual([1, 2, 3, 5, 4, 6, 7, 8])
-	})
-})
+		expect(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])).toEqual([1, 2, 3, 5, 4, 6, 7, 8]);
+	});
+});
 
 describe('convertHTML', function() {
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("Dolce & Gabbana")).toEqual("Dolce &amp; Gabbana")
-	})
+		expect(convertHTML('Dolce & Gabbana')).toEqual('Dolce &amp; Gabbana');
+	});
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("Hamburgers < Pizza < Tacos")).toEqual("Hamburgers &lt; Pizza &lt; Tacos")
-	})
+		expect(convertHTML('Hamburgers < Pizza < Tacos')).toEqual('Hamburgers &lt; Pizza &lt; Tacos');
+	});
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("Shindler's List")).toEqual("Shindler&apos;s List")
-	})
+		expect(convertHTML("Shindler's List")).toEqual('Shindler&apos;s List');
+	});
 	it('Convert the characters &, <, >,(double quote), and (apostrophe), in a string to their corresponding HTML entities', function() {
-		expect(convertHTML("abc")).toEqual("abc")
-	})
-})
+		expect(convertHTML('abc')).toEqual('abc');
+	});
+});
 
 describe('spinalCase', function() {
 	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
-		expect(spinalCase("This Is Spinal Tap")).toEqual("this-is-spinal-tap")
-	})
+		expect(spinalCase('This Is Spinal Tap')).toEqual('this-is-spinal-tap');
+	});
 	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
-		expect(spinalCase("thisIsSpinalTap")).toEqual("this-is-spinal-tap")
-	})
+		expect(spinalCase('thisIsSpinalTap')).toEqual('this-is-spinal-tap');
+	});
 	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
-		expect(spinalCase("The_Andy_Griffith_Show")).toEqual("the-andy-griffith-show")
-	})
+		expect(spinalCase('The_Andy_Griffith_Show')).toEqual('the-andy-griffith-show');
+	});
 	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
-		expect(spinalCase("AllThe-small Things")).toEqual("all-the-small-things")
-	})
+		expect(spinalCase('AllThe-small Things')).toEqual('all-the-small-things');
+	});
 	it('Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes', function() {
-		expect(spinalCase("Teletubbies say Eh-oh")).toEqual("teletubbies-say-eh-oh")
-	})
-})
+		expect(spinalCase('Teletubbies say Eh-oh')).toEqual('teletubbies-say-eh-oh');
+	});
+});
 
 describe('sumFibs', function() {
 	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
-		expect(sumFibs(1000)).toEqual(1785)
-	})
+		expect(sumFibs(1000)).toEqual(1785);
+	});
 	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
-		expect(sumFibs(4000000)).toEqual(4613732)
-	})
+		expect(sumFibs(4000000)).toEqual(4613732);
+	});
 	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
-		expect(sumFibs(4)).toEqual(5)
-	})
+		expect(sumFibs(4)).toEqual(5);
+	});
 	it('return the sum of all odd Fibonacci numbers that are less than or equal to num', function() {
-		expect(sumFibs(75025)).toEqual(135721)
-	})
-})
+		expect(sumFibs(75025)).toEqual(135721);
+	});
+});
 
 describe('sumPrimes', function() {
 	it('Sum all the prime numbers up to and including the provided number.', function() {
-		expect(sumPrimes(10)).toEqual(17)
-	})
+		expect(sumPrimes(10)).toEqual(17);
+	});
 	it('Sum all the prime numbers up to and including the provided number.', function() {
-		expect(sumPrimes(977)).toEqual(73156)
-	})
-})
+		expect(sumPrimes(977)).toEqual(73156);
+	});
+});
 
-describe('smallestCommons', function(){
+describe('smallestCommons', function() {
 	it('Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters', function() {
-		expect(smallestCommons([1, 5])).toEqual(60)
-	})
+		expect(smallestCommons([1, 5])).toEqual(60);
+	});
 	it('Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters', function() {
-		expect(smallestCommons([1, 13])).toEqual(360360)
-	})
+		expect(smallestCommons([1, 13])).toEqual(360360);
+	});
 	it('Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters', function() {
-		expect(smallestCommons([23, 18])).toEqual(6056820)
-	})
-})
+		expect(smallestCommons([23, 18])).toEqual(6056820);
+	});
+});
 
 describe('findElement', function() {
 	it('looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument)', function() {
-		expect(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })).toEqual(8)
-	})
+		expect(
+			findElement([1, 3, 5, 8, 9, 10], function(num) {
+				return num % 2 === 0;
+			})
+		).toEqual(8);
+	});
 	it('looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument)', function() {
-		expect(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })).toEqual(undefined)
-	})
-})
+		expect(
+			findElement([1, 3, 5, 9], function(num) {
+				return num % 2 === 0;
+			})
+		).toEqual(undefined);
+	});
+});
 
 describe('dropElements', function() {
 	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
-		expect(dropElements([1, 2, 3, 4], function(n) {return n >= 3;})).toEqual([3, 4])
-	})
+		expect(
+			dropElements([1, 2, 3, 4], function(n) {
+				return n >= 3;
+			})
+		).toEqual([3, 4]);
+	});
 	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
-		expect(dropElements([0, 1, 0, 1], function(n) {return n === 1;})).toEqual([1, 0, 1])
-	})
+		expect(
+			dropElements([0, 1, 0, 1], function(n) {
+				return n === 1;
+			})
+		).toEqual([1, 0, 1]);
+	});
 	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
-		expect(dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})).toEqual([3, 9, 2])
-	})
+		expect(
+			dropElements([1, 2, 3, 9, 2], function(n) {
+				return n > 2;
+			})
+		).toEqual([3, 9, 2]);
+	});
 	it('Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true', function() {
-		expect(dropElements([1, 2, 3, 4], function(n) {return n > 5;})).toEqual([])
-	})
-})
+		expect(
+			dropElements([1, 2, 3, 4], function(n) {
+				return n > 5;
+			})
+		).toEqual([]);
+	});
+});
 
 describe('steamrollArray', function() {
 	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
-		expect(steamrollArray([[["a"]], [["b"]]])).toEqual(["a", "b"])
-	})
+		expect(steamrollArray([[['a']], [['b']]])).toEqual(['a', 'b']);
+	});
 	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
-		expect(steamrollArray([1, [2], [3, [[4]]]])).toEqual([1, 2, 3, 4])
-	})
+		expect(steamrollArray([1, [2], [3, [[4]]]])).toEqual([1, 2, 3, 4]);
+	});
 	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
-		expect(steamrollArray([1, {}, [3, [[4]]]])).toEqual([1, {}, 3, 4])
-	})
+		expect(steamrollArray([1, {}, [3, [[4]]]])).toEqual([1, {}, 3, 4]);
+	});
 	it('Flatten a nested array. You must account for varying levels of nesting.', function() {
-		expect(steamrollArray([1, [], [3, [[4]]]])).toEqual([1, 3, 4])
-	})
-})
+		expect(steamrollArray([1, [], [3, [[4]]]])).toEqual([1, 3, 4]);
+	});
+});
 
 describe('binaryAgent', function() {
 	it('Return an English translated sentence of the passed binary string.', function() {
-		expect(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111")).toEqual("Aren't bonfires fun!?")
-	})
+		expect(
+			binaryAgent(
+				'01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111'
+			)
+		).toEqual("Aren't bonfires fun!?");
+	});
 	it('Return an English translated sentence of the passed binary string.', function() {
-		expect(binaryAgent("01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001")).toEqual("I love FreeCodeCamp!")
-	})
-})
+		expect(
+			binaryAgent(
+				'01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001'
+			)
+		).toEqual('I love FreeCodeCamp!');
+	});
+});
 
-
+describe('truthCheck', function() {
+	it('Check if the predicate (second argument) is truthy on all elements of a collection (first argument)', function() {
+		expect(
+			truthCheck(
+				[
+					{ user: 'Tinky-Winky', sex: 'male' },
+					{ user: 'Dipsy', sex: 'male' },
+					{ user: 'Laa-Laa', sex: 'female' },
+					{ user: 'Po', sex: 'female' }
+				],
+				'sex'
+			)
+		).toEqual(true);
+	});
+	it('Check if the predicate (second argument) is truthy on all elements of a collection (first argument)', function() {
+		expect(
+			[
+				{ user: 'Tinky-Winky', sex: 'male' },
+				{ user: 'Dipsy' },
+				{ user: 'Laa-Laa', sex: 'female' },
+				{ user: 'Po', sex: 'female' }
+			],
+			'sex'
+		).toEqual(false);
+	});
+	it('Check if the predicate (second argument) is truthy on all elements of a collection (first argument)', function() {
+		expect(
+			[
+				{ user: 'Tinky-Winky', sex: 'male', age: 0 },
+				{ user: 'Dipsy', sex: 'male', age: 3 },
+				{ user: 'Laa-Laa', sex: 'female', age: 5 },
+				{ user: 'Po', sex: 'female', age: 4 }
+			],
+			'age'
+		).toEqual(false);
+	});
+});
