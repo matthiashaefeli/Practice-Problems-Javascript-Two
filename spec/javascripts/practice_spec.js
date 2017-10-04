@@ -560,3 +560,21 @@ describe('truthCheck', function() {
 		).toEqual(false);
 	});
 });
+
+describe('addTogether', function() {
+	it('sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum', function() {
+		expect(addTogether(2, 3)).toEqual(5);
+	});
+	it('sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum', function() {
+		expect(addTogether(2)(3)).toEqual(5);
+	});
+	it('sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum', function() {
+		expect(addTogether('http://bit.ly/IqT6zt')).toEqual(undefined);
+	});
+	it('sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum', function() {
+		expect(addTogether(2, '3')).toEqual(undefined);
+	});
+	it('sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum', function() {
+		expect(addTogether(2)([3])).toEqual(undefined);
+	});
+});
