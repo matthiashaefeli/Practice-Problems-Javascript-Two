@@ -247,92 +247,92 @@ function diffArray(array1, array2) {
 		if (array2.includes(array1[i]) == false) {
 			finalArray.push(array1[i]);
 		}
-	} for (var i = 0; i < array2.length; i++) {
+	}
+	for (var i = 0; i < array2.length; i++) {
 		if (array1.includes(array2[i]) == false) {
 			finalArray.push(array2[i]);
 		}
-	}return finalArray;
+	}
+	return finalArray;
 }
 
 function convertToRoman(num) {
-	var result = "";
-	var thousands = Math.floor(num % 10000 /1000);
-         if (thousands < 4) {
-      		for (i = 0; i < thousands; i++) {
-      			result += "M";
-      		}
-      	}else if (thousands < 5) {
-      		result += "MV";
-      	}else if (undreds < 9) {
-      		result += "V";
-      		for (i = 5; i < thousands; i++) {
-      			result += "M";
-      		}
-      	}else {
-      		result += "M(X)";
-      	}
-   var hundreds = Math.floor(num/100 % 10);
-      	if (hundreds < 4) {
-      		for (i = 0; i < hundreds; i++) {
-      			result += "C";
-      		}
-      	}else if (hundreds < 5) {
-      		result += "CD";
-      	}else if (hundreds < 9) {
-      		result += "D";
-      		for (i = 5; i < hundreds; i++) {
-      			result += "C";
-      		}
-      	}else {
-      		result += "CM";
-      	}
-   var tens = Math.floor(num/10 % 10);
-      	if (tens < 4) {
-      		for (i = 0; i < tens; i++) {
-      			result += "X";
-      		}
-      	}else if (tens < 5) {
-      		result += "XL";
-      	}else if (tens < 9) {
-      		result += "L";
-      		for (i = 5; i < tens; i++) {
-      			result += "X";
-      		}
-      	}else {
-      		result += "XC";
-      	}
-    var ones = Math.floor(num % 10);
-  			if(ones < 4) {
-  				for (i = 0; i < ones; i++) {
-  					result += "I";
-  				}
-  			}else if (ones < 5) {
-  				result += "IV";
-  			}else if (ones < 9) {
-  				result += "V";
-  				for (i = 5; i < ones; i++) {
-  					result += "I";
-  				}
-  				}else {
-  					result += "IX";
-  			}
-      tenThousands = Math.floor(num / 10000 % 10),
-      hundredThousands = Math.floor(num / 100000 % 10),
-      millions = Math.floor(num / 1000000 % 10),
-      tenMillions = Math.floor(num / 10000000 % 10),
-      hundredMillions = Math.floor(num / 100000000 % 10);
- 			return result;
+	var result = '';
+	var thousands = Math.floor((num % 10000) / 1000);
+	if (thousands < 4) {
+		for (i = 0; i < thousands; i++) {
+			result += 'M';
+		}
+	} else if (thousands < 5) {
+		result += 'MV';
+	} else if (undreds < 9) {
+		result += 'V';
+		for (i = 5; i < thousands; i++) {
+			result += 'M';
+		}
+	} else {
+		result += 'M(X)';
+	}
+	var hundreds = Math.floor((num / 100) % 10);
+	if (hundreds < 4) {
+		for (i = 0; i < hundreds; i++) {
+			result += 'C';
+		}
+	} else if (hundreds < 5) {
+		result += 'CD';
+	} else if (hundreds < 9) {
+		result += 'D';
+		for (i = 5; i < hundreds; i++) {
+			result += 'C';
+		}
+	} else {
+		result += 'CM';
+	}
+	var tens = Math.floor((num / 10) % 10);
+	if (tens < 4) {
+		for (i = 0; i < tens; i++) {
+			result += 'X';
+		}
+	} else if (tens < 5) {
+		result += 'XL';
+	} else if (tens < 9) {
+		result += 'L';
+		for (i = 5; i < tens; i++) {
+			result += 'X';
+		}
+	} else {
+		result += 'XC';
+	}
+	var ones = Math.floor(num % 10);
+	if (ones < 4) {
+		for (i = 0; i < ones; i++) {
+			result += 'I';
+		}
+	} else if (ones < 5) {
+		result += 'IV';
+	} else if (ones < 9) {
+		result += 'V';
+		for (i = 5; i < ones; i++) {
+			result += 'I';
+		}
+	} else {
+		result += 'IX';
+	}
+	(tenThousands = Math.floor((num / 10000) % 10)),
+		(hundredThousands = Math.floor((num / 100000) % 10)),
+		(millions = Math.floor((num / 1000000) % 10)),
+		(tenMillions = Math.floor((num / 10000000) % 10)),
+		(hundredMillions = Math.floor((num / 100000000) % 10));
+	return result;
 }
 
-
-
-function checkIfObjectContains(one, two){
-   for (var i in one) {
-           if (! two.hasOwnProperty(i) || one[i] !== two[i] ) {
-              return false;
-           }       
-   }
-   return true;
+function checkIfObjectContains(one, two) {
+	for (var i in one) {
+		if (!two.hasOwnProperty(i) || one[i] !== two[i]) {
+			return false;
+		}
+	}
+	return true;
 }
 
 function whatIsInAName(objects, source) {
@@ -345,83 +345,81 @@ function whatIsInAName(objects, source) {
 	return result;
 }
 
-
 function isUppercase(string) {
-
 	if (string[0] === string[0].toUpperCase()) {
 		return true;
-	}else {
+	} else {
 		return false;
 	}
 }
 
-
 function toUppercase(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function myReplace(str, before, after) {
-	var newAfter = "";
+	var newAfter = '';
 	if (isUppercase(before) === true) {
 		newAfter = toUppercase(after);
-	}else {
+	} else {
 		newAfter = after;
 	}
 	var result = [];
-	var newStr = str.split(" ");
+	var newStr = str.split(' ');
 	for (var i = 0; i < newStr.length; i++) {
 		if (newStr[i] === before) {
 			result.push(newAfter);
-		}else {
+		} else {
 			result.push(newStr[i]);
 		}
-	}return result.join(" ");
+	}
+	return result.join(' ');
 }
 
-
 function translatePigLatin(string) {
-	var vowels = ['a','e','i','o','u'];
+	var vowels = ['a', 'e', 'i', 'o', 'u'];
 	var result = [];
 	var consonant = [];
 	for (var i = 0; i < string.length; i++) {
 		if (vowels.includes(string[0])) {
-		return string+"way";
-	}else if (! vowels.includes(string[i])) {
+			return string + 'way';
+		} else if (!vowels.includes(string[i])) {
 			consonant.push(string[i]);
-		}else {
-			result.push(string.substring(i, string.length))
+		} else {
+			result.push(string.substring(i, string.length));
 			i = string.length;
 		}
-	}return result.join("")+consonant.join("")+"ay";
+	}
+	return result.join('') + consonant.join('') + 'ay';
 }
 
 function pairElement(str) {
 	var result = [];
 	var dn = [];
 	for (var i = 0; i < str.length; i++) {
-		if (str[i] === "A") {
+		if (str[i] === 'A') {
 			dn.push(str[i]);
-			dn.push("T");
+			dn.push('T');
 			result.push(dn);
 			dn = [];
-		}else if (str[i] === "T") {
+		} else if (str[i] === 'T') {
 			dn.push(str[i]);
-			dn.push("A");
+			dn.push('A');
 			result.push(dn);
 			dn = [];
-		}else if (str[i] === "G") {
+		} else if (str[i] === 'G') {
 			dn.push(str[i]);
-			dn.push("C");
+			dn.push('C');
 			result.push(dn);
-			dn =[];
-		}else if (str[i] === "C") {
+			dn = [];
+		} else if (str[i] === 'C') {
 			dn.push(str[i]);
-			dn.push("G");
+			dn.push('G');
 			result.push(dn);
-			dn =[];
+			dn = [];
 		}
 	}
-	return result
+	return result;
 }
 
 function fearNotLetter(str) {
@@ -456,28 +454,29 @@ function fearNotLetter(str) {
 	var letterIndex = alphabet.indexOf(str[0]);
 	for (var i = 0, itwo = letterIndex; i < str.length; i++, itwo++) {
 		if (alphabet[itwo] != str[i]) {
-			return alphabet[itwo]
+			return alphabet[itwo];
 		}
 	}
 }
 
 function booWho(bool) {
-	if (typeof(bool) === "boolean") {
-		return true
-	}else {
-		return false
+	if (typeof bool === 'boolean') {
+		return true;
+	} else {
+		return false;
 	}
 }
 
 function uniteUnique(array) {
-	var newArray = []
+	var newArray = [];
 	for (var i = 0; i < arguments.length; i++) {
 		for (var itwo = 0; itwo < arguments[i].length; itwo++) {
-			if (! newArray.includes(arguments[i][itwo])) {
-				newArray.push(arguments[i][itwo])
+			if (!newArray.includes(arguments[i][itwo])) {
+				newArray.push(arguments[i][itwo]);
 			}
 		}
-	}return newArray
+	}
+	return newArray;
 }
 
 // this works perfect but the other one is a better solution
@@ -487,25 +486,31 @@ function uniteUnique(array) {
 // }
 
 function convertHTML(string) {
-  var map = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&apos;'
-  };
+	var map = {
+		'&': '&amp;',
+		'<': '&lt;',
+		'>': '&gt;',
+		'"': '&quot;',
+		"'": '&apos;'
+	};
 
-  return string.replace(/[&<>"']/g, function(m) { return map[m]; });
+	return string.replace(/[&<>"']/g, function(m) {
+		return map[m];
+	});
 }
 
-
 function toLowercase(string) {
-    return string.charAt(0).toLowerCase() + string.slice(1);
+	return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
 function spinalCase(string) {
 	var newStr = toLowercase(string);
-return newStr.replace(/ /g, '-').replace(/([A-Z])/g, '-$1').toLowerCase().replace(/ |_/g, "").replace(/--/g, "-");
+	return newStr
+		.replace(/ /g, '-')
+		.replace(/([A-Z])/g, '-$1')
+		.toLowerCase()
+		.replace(/ |_/g, '')
+		.replace(/--/g, '-');
 }
 
 function sumFibs(number) {
@@ -515,32 +520,36 @@ function sumFibs(number) {
 	var fib = [1, 1];
 	while (fib[fib.length - 1] < number) {
 		fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
-	}for (var i = 0; i < fib.length; i++) {
-		if (fib[i]%2 !== 0  ) {
+	}
+	for (var i = 0; i < fib.length; i++) {
+		if (fib[i] % 2 !== 0) {
 			oddNumbers.push(fib[i]);
 		}
-	}for (var a = 0; a < oddNumbers.length; a++) {
+	}
+	for (var a = 0; a < oddNumbers.length; a++) {
 		if (oddNumbers[a] <= number) {
 			newOddNumbers.push(oddNumbers[a]);
 		}
-	}for (var b = 0; b < newOddNumbers.length; b++) {
+	}
+	for (var b = 0; b < newOddNumbers.length; b++) {
 		result += newOddNumbers[b];
-	} return result;
+	}
+	return result;
 }
 
-
-function isPrime(n){
-  if (n===1) {
-    return false;
-  }else if(n === 2) {
-    return true;
-  }else {
-    for(var x = 2; x < n; x++) {
-      if(n % x === 0) {
-        return false;
-      }
-    }return true;  
-  }
+function isPrime(n) {
+	if (n === 1) {
+		return false;
+	} else if (n === 2) {
+		return true;
+	} else {
+		for (var x = 2; x < n; x++) {
+			if (n % x === 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
 
 function sumPrimes(number) {
@@ -550,19 +559,20 @@ function sumPrimes(number) {
 		if (isPrime(i) === true) {
 			primesNumbers.push(i);
 		}
-	} 
+	}
 	for (var a = 0; a < primesNumbers.length; a++) {
 		result += primesNumbers[a];
-	}return result;
+	}
+	return result;
 }
-
 
 function allDiv(arr, num) {
 	for (var i = 0; i < arr.length; i++) {
 		if (num % arr[i] !== 0) {
 			return false;
 		}
-	}return true;
+	}
+	return true;
 }
 
 function smallestCommons(arr) {
@@ -570,15 +580,20 @@ function smallestCommons(arr) {
 	var finalArr = [];
 	for (var i = newArr[0]; i < newArr[newArr.length - 1]; i++) {
 		finalArr.push(i);
-	} finalArr.push(newArr[newArr.length - 1]);
-		for (var num = finalArr[finalArr.length - 1]; allDiv(finalArr, num) === false; num+=finalArr[finalArr.length - 1]) {
-		}return num;
+	}
+	finalArr.push(newArr[newArr.length - 1]);
+	for (
+		var num = finalArr[finalArr.length - 1];
+		allDiv(finalArr, num) === false;
+		num += finalArr[finalArr.length - 1]
+	) {}
+	return num;
 }
 
 function findElement(arr, func) {
 	for (var i = 0; i < arr.length; i++) {
 		if (func(arr[i]) === true) {
-			return arr[i]
+			return arr[i];
 		}
 	}
 }
@@ -591,7 +606,7 @@ function dropElements(arr, func) {
 			if (count === arr.length - 1) {
 				return [];
 			}
-		}else {
+		} else {
 			return arr.slice(count);
 		}
 	}
@@ -599,27 +614,46 @@ function dropElements(arr, func) {
 
 function steamrollArray(arr) {
 	var finalArray = [];
-	var number = "";
-	var newArray = arr.join().replace(/,,/g, ',').split(",");
+	var number = '';
+	var newArray = arr
+		.join()
+		.replace(/,,/g, ',')
+		.split(',');
 	for (var i = 0; i < newArray.length; i++) {
-		 number = Number(newArray[i]);
-		 if (newArray[i] === '[object Object]') {
-		 	finalArray.push({});
-		 }
-		else if (isNaN(number)) {
+		number = Number(newArray[i]);
+		if (newArray[i] === '[object Object]') {
+			finalArray.push({});
+		} else if (isNaN(number)) {
 			finalArray.push(newArray[i]);
-		}else {
+		} else {
 			finalArray.push(number);
 		}
-	}return finalArray;
+	}
+	return finalArray;
 }
 
 function binaryAgent(string) {
-	var numberArray = []
-	var stringArray = string.split(" ")
+	var numberArray = [];
+	var stringArray = string.split(' ');
 	for (var i = 0; i < stringArray.length; i++) {
-		numberArray.push(String.fromCharCode(parseInt(stringArray[i], 2)))
-	}return numberArray.join('')
+		numberArray.push(String.fromCharCode(parseInt(stringArray[i], 2)));
+	}
+	return numberArray.join('');
 }
 
+function truthyOrFalsy(par) {
+	return par ? 'truthy' : 'falsy';
+}
 
+function truthCheck(collection, pre) {
+	for (var i = 0; i < collection.length; i++) {
+		if (collection[i].hasOwnProperty(pre) === false) {
+			return false;
+		} else {
+			if (truthyOrFalsy(collection[i][pre]) === 'falsy') {
+				return false;
+			}
+		}
+	}
+	return true;
+}
