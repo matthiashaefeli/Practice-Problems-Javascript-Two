@@ -578,3 +578,21 @@ describe('addTogether', function() {
 		expect(addTogether(2)([3])).toEqual(undefined);
 	});
 });
+
+describe('telephoneCheck', function() {
+	it('Return true if the passed string is a valid US phone number', function() {
+		expect(telephoneCheck('1 555-555-5555')).toEqual(true);
+	});
+	it('Return true if the passed string is a valid US phone number', function() {
+		expect(telephoneCheck('1 (555) 555-5555')).toEqual(true);
+	});
+	it('Return true if the passed string is a valid US phone number', function() {
+		expect(telephoneCheck('5555555555')).toEqual(true);
+	});
+	it('Return true if the passed string is a valid US phone number', function() {
+		expect(telephoneCheck('555-5555')).toEqual(false);
+	});
+	it('Return true if the passed string is a valid US phone number', function() {
+		expect(telephoneCheck('1 555)555-5555')).toEqual(false);
+	});
+});
