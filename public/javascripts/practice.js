@@ -658,10 +658,31 @@ function truthCheck(collection, pre) {
 	return true;
 }
 
-function checkIfNumber(arg) {
-	return Number.isInteger(parseInt(arg));
-}
-
 function addTogether() {
-	debugger;
+	var checkNum = function(number) {
+		if (Number.isInteger(number) === false) {
+			return undefined;
+		} else return number;
+	};
+
+	if (arguments.length > 1) {
+		var arg1 = checkNum(arguments[0]);
+		var arg2 = checkNum(arguments[1]);
+		if (arg1 === undefined || arg2 === undefined) {
+			return undefined;
+		} else {
+			return arg1 + arg2;
+		}
+	} else {
+		var arg3 = arguments[0];
+		if (checkNum(arg3)) {
+			return function(otherArg) {
+				if (arg3 === undefined || checkNum(otherArg) === undefined) {
+					return undefined;
+				} else {
+					return arg3 + otherArg;
+				}
+			};
+		}
+	}
 }
