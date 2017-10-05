@@ -686,3 +686,7 @@ function addTogether() {
 		}
 	}
 }
+
+function telephoneCheck(string) {
+	var newString = string.replace(/\s|-/g, '');
+}
